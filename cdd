@@ -1,0 +1,6 @@
+
+# move to the containing folder of abs path $1
+# usage:
+# . cdd <arg>
+
+cd "`dirname "$1"`"
