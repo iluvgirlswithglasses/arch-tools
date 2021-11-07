@@ -6,6 +6,7 @@ github: 	https://github.com/iluvgirlswithglasses
 tab-width:	4 spaces
 
 I sexually identify myself as an Attack Helicopter
+BTW I use Arch
 */
 
 #include <iostream>
