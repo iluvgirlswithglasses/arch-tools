@@ -55,7 +55,7 @@ int main(int argc, char const *argv[]) {
 	typ = get_typ(out);
 	//
 	gen_template();
-	string exec = "cp " + cwd + "/template/c" + typ + " " + out;
+	string exec = "cp " + cwd + "/template/c" + typ + " \"" + out + "\"";
 	system(exec.c_str());
 	return 0;
 }

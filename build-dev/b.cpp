@@ -13,8 +13,8 @@ int main(int argc, char const *argv[]) {
         cout << "two few args\n";
     } else {
         string f = argv[1],
-               compile = "g++ -o " + f + ".exe " + f + ".cpp",
-               run = "./" + f + ".exe";
+               compile = "g++ -o \"" + f + ".exe\" \"" + f + ".cpp\"",
+               run = "\"./" + f + ".exe\"";
         if (argc == 3) {
             string test = argv[2];
             run = run + " < " + test;
@@ -22,6 +22,8 @@ int main(int argc, char const *argv[]) {
         //
         // cout << compile << "\n" << run << "\n";
         system(compile.c_str());
+        if (argc == 2)
+            cout << "compiled successfully, you can start typing input\n\n";
         system(run.c_str());
     }
     return 0;
