@@ -19,11 +19,12 @@ int main(int argc, char const *argv[]) {
             string test = argv[2];
             run = run + " < " + test;
         }
+        run = run + " && rm \"./" + f + ".exe\"";
         //
         // cout << compile << "\n" << run << "\n";
         system(compile.c_str());
         if (argc == 2)
-            cout << "compiled successfully, you can start typing input\n\n";
+            cout << "compiled successfully, you can start typing input\n-------------------------------------------------\n";
         system(run.c_str());
     }
     return 0;
