@@ -13,13 +13,7 @@ to build and run with stdin from file:
     b <filename> <testfile>
 */
 
-string src, f, typ, inp, compiler;
-
-string get_compiler(string &typ) {
-    if (typ == ".cpp") return "g++";
-    if (typ == ".c") return "gcc";
-    return "NULL";
-}
+string src, f, typ, inp;
 
 /*
 path utils
@@ -40,10 +34,19 @@ string and_rm() {
     return " && rm \"./" + f + ".exe\"";
 }
 
-void compile(string &f, string &src, string &compiler) {
-    string cmd = compiler + " -o \"" + f + ".exe\" \"" + src + "\"";
+bool compile(string &f, string &src, string &typ) {
+    string cmd;
+    if (typ == ".cpp") {
+        cmd = "g++ -o \"" + f + ".exe\" \"" + src + "\"";
+    } else if (typ == ".c") {
+        cmd = "gcc -o \"" + f + ".exe\" \"" + src + "\"";
+    } else {
+        return false;
+    }
+    //
     cout << "$ " << cmd << "\n";
     system(cmd.c_str());
+    return true;
 }
 
 void run() {
@@ -68,12 +71,10 @@ int main(int argc, char const *argv[]) {
         typ = get_typ(src); // src can be modified here
         f = src.substr(0, src.length() - typ.length());
         // compile
-        string compiler = get_compiler(typ);
-        if (compiler == "NULL") {
+        if (!compile(f, src, typ)) {
             cout << "unsupported file type: " << typ << "\n";
             return 0;
         }
-        compile(f, src, compiler);
         // execution
         if (argc == 2) {
             // stdin from terminal

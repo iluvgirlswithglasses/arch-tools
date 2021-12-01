@@ -5,6 +5,10 @@ github: 	https://github.com/iluvgirlswithglasses
 {{date}}
 tab-width:	4 spaces
 
+ /\_/\
+( o.o )
+ > ^ <
+
 I sexually identify myself as an Attack Helicopter
 BTW I use Arch
 */
@@ -14,4 +18,3 @@ BTW I use Arch
 int main() {
 	return 0;
 }
-
