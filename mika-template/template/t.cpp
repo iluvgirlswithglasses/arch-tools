@@ -2,7 +2,7 @@
 /*
 author: 	iluvgirlswithglasses 
 github: 	https://github.com/iluvgirlswithglasses 
-{{date}}
+created:	{{date}}
 tab-width:	4 spaces
 
  /\_/\

@@ -67,7 +67,7 @@ void gen_template() {
 	//
 	while (getline(tsrc, line)) {
 		// maybe we should add more macro in the future
-		replace(line, "{{date}}", "created:\t" + cr_time);
+		replace(line, "{{date}}", cr_time);
 		replace(line, "{{mdtime}}", mdtime(t));
 		csrc << line << "\n";
 	}
