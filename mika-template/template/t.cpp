@@ -16,7 +16,9 @@ BTW I use Arch
 #include <iostream>
 using namespace std;
 
+#define all(c) c.begin(), c.end()
 #define ll long long
+#define pi pair<int, int>
 #define st first
 #define nd second
 

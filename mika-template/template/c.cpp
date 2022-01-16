@@ -2,7 +2,7 @@
 /*
 author: 	iluvgirlswithglasses 
 github: 	https://github.com/iluvgirlswithglasses 
-created:	Mon Dec 13 09:55:46 2021
+created:	Sun Jan 16 22:35:07 2022
 tab-width:	4 spaces
 
  /\_/\
@@ -16,7 +16,9 @@ BTW I use Arch
 #include <iostream>
 using namespace std;
 
+#define all(c) c.begin(), c.end()
 #define ll long long
+#define pi pair<int, int>
 #define st first
 #define nd second
 
