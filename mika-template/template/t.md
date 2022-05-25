@@ -6,6 +6,7 @@ geometry: margin=2cm
 output: 
   pdf_document: 
     latex_engine: xelatex
+fontsize: 12pt
 ---
 
 ## See you in space
