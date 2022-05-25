@@ -36,13 +36,12 @@ string and_rm() {
 
 bool compile(string &f, string &src, string &typ) {
     string cmd;
-    if (typ == ".cpp") {
+    if (typ == ".cpp")
         cmd = "g++ -o \"" + f + ".exe\" \"" + src + "\"";
-    } else if (typ == ".c") {
+    else if (typ == ".c")
         cmd = "gcc -o \"" + f + ".exe\" \"" + src + "\"";
-    } else {
+    else
         return false;
-    }
     //
     cout << "$ " << cmd << "\n";
     system(cmd.c_str());

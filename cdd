@@ -1,6 +1,4 @@
 
-# move to the containing folder of abs path $1
-# usage:
-# . cdd <arg>
+# move to the containing folder with index $1 in list
 
-cd "`dirname "$1"`"
+cd "`lsii $1`"
